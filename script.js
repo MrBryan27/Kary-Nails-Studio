@@ -1,74 +1,47 @@
-// Envio de formulario 
+document.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById("reservaForm").addEventListener("submit", e => {
-  e.preventDefault();
+  // Envío formulario WhatsApp
+  const form = document.getElementById("reservaForm");
+  if (form) {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
 
-  const nombre = document.getElementById("nombre").value;
-  const servicio = document.getElementById("servicio").value;
-  const fechaHora = document.getElementById("fechaHora").value;
+      const nombre = document.getElementById("nombre").value;
+      const servicio = document.getElementById("servicio").value;
+      const fechaHora = document.getElementById("fechaHora").value;
 
-  const telefono = "573132675755"; // cámbialo por el real
-  const mensaje = `Hola, soy ${nombre}. Quiero reservar un ${servicio} el día ${fechaHora}. ¿Está disponible ese horario?`;
+      const telefono = "573132675755";
+      const mensaje = `Hola, soy ${nombre}. Quiero reservar un ${servicio} el día ${fechaHora}.`;
 
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank"); // abre WhatsApp
-});
+      window.open(
+        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
+      );
+    });
+  }
 
-// animacion de servicios y precio
-
-const servicios = document.querySelectorAll('.servicio-item');
-
-const observerServicios = new IntersectionObserver(
-  entries => {
+  // Animación servicios
+  const servicios = document.querySelectorAll(".servicio-item");
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
+      if (entry.isIntersecting) entry.target.classList.add("show");
     });
-  },
-  { threshold: 0.3 }
-);
+  }, { threshold: 0.3 });
 
-servicios.forEach(servicio => observerServicios.observe(servicio));
+  servicios.forEach(item => observer.observe(item));
 
-// envio de imagen al whatsaap
-
-const telefono = "573132675755";
-
-document.querySelectorAll(".diseno-whatsapp").forEach(img => {
-  img.addEventListener("click", () => {
-    const nombre = img.dataset.diseno;
-    const imagen = img.dataset.img;
-
-    const mensaje = 
-`Hola 💅✨
-Quiero este diseño: *${nombre}*
-Aquí está la imagen:
-${imagen}`;
-
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-  });
-});
-
-//abrir y cerrar servicios y precios
-
-function toggleLista() {
-  document.getElementById("servicios").classList.toggle("activa");
-}
-
-
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImg");
-
-  document.querySelectorAll(".galeria-completa img").forEach(img => {
+  // Envío diseño WhatsApp
+  document.querySelectorAll(".diseno-whatsapp").forEach(img => {
     img.addEventListener("click", () => {
-      modalImg.src = img.src;
-      modal.classList.add("active");
+      const nombre = img.dataset.diseno;
+      const imagen = img.dataset.img;
+
+      const mensaje = `Hola 💅✨\nQuiero este diseño: ${nombre}\n${imagen}`;
+      window.open(
+        `https://wa.me/573132675755?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
+      );
     });
   });
 
-  modal.addEventListener("click", () => {
-    modal.classList.remove("active");
-  });
-
+});
