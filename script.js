@@ -7,7 +7,7 @@ document.getElementById("reservaForm").addEventListener("submit", e => {
   const servicio = document.getElementById("servicio").value;
   const fechaHora = document.getElementById("fechaHora").value;
 
-  const telefono = "573014913791"; // cámbialo por el real
+  const telefono = "573132675755"; // cámbialo por el real
   const mensaje = `Hola, soy ${nombre}. Quiero reservar un ${servicio} el día ${fechaHora}. ¿Está disponible ese horario?`;
 
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
@@ -33,7 +33,7 @@ servicios.forEach(servicio => observerServicios.observe(servicio));
 
 // envio de imagen al whatsaap
 
-const telefono = "573014913791";
+const telefono = "573132675755";
 
 document.querySelectorAll(".diseno-whatsapp").forEach(img => {
   img.addEventListener("click", () => {
@@ -51,4 +51,8 @@ ${imagen}`;
   });
 });
 
+//abrir y cerrar servicios y precios
 
+function toggleLista() {
+  document.getElementById("servicios").classList.toggle("activa");
+}

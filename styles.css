@@ -22,6 +22,7 @@ html, body {
   padding: 0;
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--nude);
@@ -188,6 +189,11 @@ iframe {
   margin-top: 50px;
 }
 
+.ps {
+  text-decoration: none;
+
+}
+
 .footer p {
   color: #444;
   font-size: 0.9rem;
@@ -198,6 +204,7 @@ iframe {
 
 .footer strong {
   color: #e75480;
+  text-decoration: none;
 }
 
 
@@ -395,4 +402,59 @@ iframe {
 
 .diseno-whatsapp:hover {
   transform: scale(1.05);
+}
+
+/* === ACORDEÓN SERVICIOS === */
+
+.acordeon {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* summary */
+.acordeon-titulo {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px;
+  background: #fdecef;
+  border-radius: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* quitar flecha nativa */
+.acordeon summary::-webkit-details-marker {
+  display: none;
+}
+
+/* grupo texto + flecha */
+.grupo-titulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* título */
+.grupo-titulo h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: #e94b7d;
+}
+
+/* flecha moderna */
+.flecha {
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #e94b7d;
+  border-bottom: 3px solid #e94b7d;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* flecha al abrir */
+.acordeon[open] .flecha {
+  transform: rotate(-135deg);
 }
