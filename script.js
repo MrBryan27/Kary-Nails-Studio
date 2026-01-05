@@ -57,7 +57,7 @@ function toggleLista() {
   document.getElementById("servicios").classList.toggle("activa");
 }
 
-<script>
+
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modalImg");
 
@@ -71,4 +71,4 @@ function toggleLista() {
   modal.addEventListener("click", () => {
     modal.classList.remove("active");
   });
-</script>
+
