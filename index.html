@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza en tus manos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Encabezado -->
+    <header class="header">
+        <h1>✨ Belleza en tus manos ✨</h1>
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Diseños</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    </header>
+
+<!-- Servicios -->
+<section id="servicios">
+    <h2>Servicios y precios</h2>
+        <ul class="servicios-lista">
+            <li class="servicio-item">
+                <span class="servicio-nombre">Manicure tradicional</span>
+                <span class="servicio-precio">$20.000</span>
+            </li>
+            <li class="servicio-item">
+                <span class="servicio-nombre">Pedicure spa</span>
+                <span class="servicio-precio">$35.000</span>
+            </li>
+            <li class="servicio-item">
+                <span class="servicio-nombre">Uñas acrílicas</span>
+                <span class="servicio-precio">$50.000</span>
+            </li>
+            <li class="servicio-item">
+                <span class="servicio-nombre">Decoración personalizada</span>
+                <span class="servicio-precio">$15.000</span>
+            </li>
+        </ul>
+</section>
+
+
+<!-- Galería -->
+<!-- Galería -->
+<section id="galeria">
+    <h2>Diseños disponibles</h2>
+
+    <div class="slider">
+  <div class="slider-track">
+
+    <img 
+      src="https://i.pinimg.com/736x/b1/7d/13/b17d132342512e40cfbf7632aec74ea0.jpg"
+      alt="Diseño 1"
+      class="diseno-whatsapp"
+      data-diseno="Diseño elegante rosa"
+      data-img="https://i.pinimg.com/736x/b1/7d/13/b17d132342512e40cfbf7632aec74ea0.jpg">
+
+    <img 
+      src="https://i.pinimg.com/736x/9f/b9/05/9fb9051a3e4f1ead77475d094015b5aa.jpg"
+      alt="Diseño 2"
+      class="diseno-whatsapp"
+      data-diseno="Diseño francés moderno"
+      data-img="https://i.pinimg.com/736x/9f/b9/05/9fb9051a3e4f1ead77475d094015b5aa.jpg">
+
+    <img 
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSikyl4eHNr_AuAqzVu7aPIyt2u4IWWTYTYUw&s"
+      alt="Diseño 3"
+      class="diseno-whatsapp"
+      data-diseno="Diseño minimalista"
+      data-img="https://i.pinimg.com/736x/b1/7d/13/b17d132342512e40cfbf7632aec74ea0.jpg">
+
+    <img 
+  src="https://i.pinimg.com/736x/b1/7d/13/b17d132342512e40cfbf7632aec74ea0.jpg"
+  alt="Diseño glam"
+  class="diseno-whatsapp"
+  data-diseno="Diseño glam"
+  data-img="https://i.pinimg.com/736x/b1/7d/13/b17d132342512e40cfbf7632aec74ea0.jpg">
+
+
+  </div>
+</div>
+
+
+<p class="ver-mas">
+    <a href="galeria.html">Ver todos los diseños →</a>
+</p>
+</section>
+
+</section>
+
+<!-- Agenda de reservas -->
+<h2>Reserva tu cita</h2>
+<form id="reservaForm" class="form-reserva">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <select id="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option>Manicure</option>
+            <option>Pedicure</option>
+            <option>Uñas acrílicas</option>
+        </select>
+    <input type="datetime-local" id="fechaHora" required>
+<button type="submit">Enviar por WhatsApp</button>
+</form>
+
+
+
+<!-- Contacto -->
+<section id="contacto">
+    <h2>Ubicación</h2>
+        <p>Calle 82c 26c1 79, Barranquilla</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1958.3855462954377!2d-74.82631818158922!3d10.980643153626607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sus!4v1767489214516!5m2!1ses!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/573014913791" class="whatsapp">💬</a>
+
+
+<footer class="footer">
+<p>
+    © 2026 Belleza en tus manos · Todos los derechos reservados <br>
+    Desarrollo por 
+    <strong>PS Soluciones en Tecnología</strong>
+</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
