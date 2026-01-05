@@ -56,3 +56,19 @@ ${imagen}`;
 function toggleLista() {
   document.getElementById("servicios").classList.toggle("activa");
 }
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  document.querySelectorAll(".galeria-completa img").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
+  });
+
+  modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+</script>
