@@ -308,3 +308,16 @@ iframe {
   color: var(--dorado);
   text-decoration: none;
 }
+
+#contacto iframe {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  margin: 25px auto 0;
+  border-radius: 15px;
+  border: 0;
+  background: #eaeaea;
+  position: relative;
+  z-index: 10;
+}
