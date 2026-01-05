@@ -1,1 +1,1 @@
-# Nice-Karina
+# Kary Nails Studio
